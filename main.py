@@ -1,9 +1,12 @@
 print("hello, world")
 
-def la_so_nguyen_to(n):
-    if n < 2: return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0: return False
+
+def isPrime(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
     return True
 
 def thong_ke_day_so():
@@ -23,7 +26,7 @@ def thong_ke_day_so():
     
     for x in danh_sach_so:
       
-        if la_so_nguyen_to(x):
+        if isPrime(x):
             dem_nguyen_to += 1
             
   
@@ -33,3 +36,7 @@ def thong_ke_day_so():
 
 if __name__ == "__main__":
     thong_ke_day_so()
+
+
+
+
